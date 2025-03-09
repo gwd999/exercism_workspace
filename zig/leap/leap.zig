@@ -1,4 +1,13 @@
+// implement leap year check function
 pub fn isLeapYear(year: u32) bool {
-    _ = year;
-    @compileError("please implement the isLeapYear function");
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                return true;
+            }
+            return false;
+        }
+        return true;
+    }
+    return false;
 }
